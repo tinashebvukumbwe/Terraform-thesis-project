@@ -9,10 +9,7 @@ terraform {
   
 }
 
-provider "aws" {
-  region  = "eu-central-1"
-  
-}
+
 
 resource "aws_instance" "example_server" {
   ami           = "ami-04dfd853d88e818e8"
