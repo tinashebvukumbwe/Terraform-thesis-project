@@ -93,3 +93,6 @@ resource "aws_route_table_association" "this" {
   route_table_id = aws_route_table.this[each.value.rt_name].id
 
 }
+provider "aws" {
+  region = var.region
+}
