@@ -1,3 +1,13 @@
+resource "aws_instance" "example_server" {
+  ami           = "ami-04dfd853d88e818e8"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "firstone"
+  }
+}
+
+
 resource "aws_vpc" "this" {
 
   for_each             = var.vpc_parameters
