@@ -42,9 +42,9 @@ variable "subnet_parameters" {
 
 
 
-variable "igw_parameters" {
+variable "internet_gatway_parameters" {
 
-  description = "IGW parameters"
+  description = "Internet gateway parameters"
 
   type = map(object({
 
@@ -62,9 +62,9 @@ variable "igw_parameters" {
 
 
 
-variable "rt_parameters" {
+variable "route_table_parameters" {
 
-  description = "RT parameters"
+  description = "Route table parameters"
 
   type = map(object({
 
@@ -88,9 +88,9 @@ variable "rt_parameters" {
 
 }
 
-variable "rt_association_parameters" {
+variable "route_table_association_parameters" {
 
-  description = "RT association parameters"
+  description = "Route Table association parameters"
 
   type = map(object({
 
