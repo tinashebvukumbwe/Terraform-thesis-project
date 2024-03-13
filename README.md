@@ -1,1 +1,1 @@
-# Terraform-vpc
+# Terraform project for thesis
