@@ -1,9 +1,9 @@
-resource "aws_instance" "example_server" {
+resource "aws_instance" "thesis_server" {
   ami           = "ami-03484a09b43a06725"
   instance_type = "t2.micro"
 
   tags = {
-    Name = "firstone"
+    Name = "exampleserver"
   }
 }
 
@@ -48,7 +48,7 @@ resource "aws_subnet" "this" {
 
 resource "aws_internet_gateway" "this" {
 
-  for_each = var.igw_parameters
+  for_each = var.internet_gatway_parameters
 
   vpc_id   = aws_vpc.this[each.value.vpc_name].id
 
@@ -64,7 +64,7 @@ resource "aws_internet_gateway" "this" {
 
 resource "aws_route_table" "this" {
 
-  for_each = var.rt_parameters
+  for_each = var.route_table_parameters
 
   vpc_id   = aws_vpc.this[each.value.vpc_name].id
 
@@ -96,7 +96,7 @@ resource "aws_route_table" "this" {
 
 resource "aws_route_table_association" "this" {
 
-  for_each       = var.rt_association_parameters
+  for_each       = var.route_table_association_parameters
 
   subnet_id      = aws_subnet.this[each.value.subnet_name].id
 
