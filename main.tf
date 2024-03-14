@@ -8,6 +8,7 @@ resource "aws_instance" "thesis_server" {
 }
 
 
+
 resource "aws_vpc" "this" {
 
   for_each             = var.vpc_parameters
